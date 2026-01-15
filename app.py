@@ -2,12 +2,14 @@ import streamlit as st
 import pickle
 import string
 import nltk
+import os
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
 st.set_page_config(page_title="Spam Sentinel AI", page_icon="🛡️", layout="centered")
 
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 ps = PorterStemmer()
@@ -155,6 +157,7 @@ if predict_btn:
             st.balloons()
 
 st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 st.markdown("<br><p style='text-align: center; color: #555; font-size:12px;'>ENCRYPTED ANALYTICS CORE v2.0 | IDS PROJECT</p>", unsafe_allow_html=True)
